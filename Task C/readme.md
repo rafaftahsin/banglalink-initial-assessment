@@ -14,3 +14,4 @@ Fri 01 May 2015 13:54:36 -0000
 ```
 { "id": "b2d456af3e04", "result": "['25200', '88200']" }
 ```
+- `docker-compose down` to stop the server
