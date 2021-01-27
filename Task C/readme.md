@@ -1,6 +1,6 @@
 It's a python3.6 Application.
 
-- Run server with `python" -m flask run`.
+- Run with `docker-compose up -d`.
 - http://127.0.0.1:5000/ will show the output.
 - Sample input 
 ```
@@ -12,5 +12,5 @@ Fri 01 May 2015 13:54:36 -0000
 ```
 - Output
 ```
-['25200', '88200']
+{ "id": "b2d456af3e04", "result": "['25200', '88200']" }
 ```

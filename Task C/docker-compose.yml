@@ -1,6 +1,18 @@
-version: "2"
+version: "3"
 services:
-  web:
+  taskc:
     build: .
+    expose:
+      - "5000"
+    depends_on:
+      - nginx
+    deploy:
+      replicas: 2
+    environment:
+      VIRTUAL_HOST: 'localhost'
+  nginx:
+    image: jwilder/nginx-proxy
+    volumes: 
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
     ports:
-      - "5000:5000"
+      - "5000:80"

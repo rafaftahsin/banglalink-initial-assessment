@@ -2,9 +2,11 @@ from flask import Flask
 from flask import request
 import sys
 import datetime
+import os
+import socket
 
 app = Flask(__name__)
-
+host = socket.gethostname()
 
 @app.route('/', methods=['POST'])
 def dif():
@@ -20,7 +22,7 @@ def dif():
         # Ref: https://stackoverflow.com/a/43308104/4814427
         dt = int((t1 - t2).total_seconds())
         output.append(str(dt))
-    return str(output)
+    return '{ "id": "%s", "result": "%s" }' % ( host, str(output) )
 
 
 if __name__ == '__main__':
