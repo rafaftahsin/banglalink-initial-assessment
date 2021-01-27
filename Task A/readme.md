@@ -1,0 +1,2 @@
+- Run with `python main.py`.
+- Give input in terminal as described in the problem statement.
